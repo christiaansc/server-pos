@@ -25,7 +25,7 @@ switch (process.env.NODE_ENV) {
 const sequelize = new Sequelize(DB_NAME, DB_USERNAME, DB_PASSWORD, {
     host: DB_HOSTNAME,
     dialect: "mysql",
-    
+    logging: false,
   });
 
   const test = async () => {
@@ -38,7 +38,6 @@ const sequelize = new Sequelize(DB_NAME, DB_USERNAME, DB_PASSWORD, {
       console.log("");
     } catch (error) {
       console.log(`Ocurrio un error al conectar a la BD`);
-      // console.log(error);
     }
   };
   
